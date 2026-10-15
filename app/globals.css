@@ -1,0 +1,38 @@
+:root {
+  --bg: #ffffff; --fg: #1a1a2e; --muted: #5b5f6b;
+  --accent: #2f5bea; --line: #e3e6ee; --code: #f4f6fb;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #14151a; --fg: #e8eaf0; --muted: #a0a4b0;
+    --accent: #7d9bff; --line: #2a2d38; --code: #1d1f27; }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
+header.site { border-bottom: 1px solid var(--line); margin-bottom: 36px; padding-bottom: 16px;
+  display: flex; justify-content: space-between; align-items: baseline; }
+header.site .brand { font-weight: 700; font-size: 18px; color: var(--fg); }
+header.site .tag { color: var(--muted); font-size: 13px; }
+.post-list { list-style: none; padding: 0; margin: 0; }
+.post-list li { padding: 18px 0; border-bottom: 1px solid var(--line); }
+.post-list h2 { margin: 0 0 4px; font-size: 19px; }
+.post-list .date { color: var(--muted); font-size: 13px; }
+.post-list p { margin: 6px 0 0; color: var(--muted); }
+article h1 { font-size: 30px; line-height: 1.2; margin: 0 0 8px; }
+article .meta { color: var(--muted); font-size: 13px; margin-bottom: 32px; }
+article h2 { font-size: 22px; margin-top: 36px; }
+article h3 { font-size: 18px; margin-top: 28px; }
+article img { max-width: 100%; height: auto; border-radius: 8px; }
+article pre { background: var(--code); padding: 14px; border-radius: 8px; overflow-x: auto; }
+article code { background: var(--code); padding: 2px 5px; border-radius: 4px; font-size: 90%; }
+article pre code { background: none; padding: 0; }
+article blockquote { border-left: 3px solid var(--line); margin: 20px 0; padding: 4px 16px; color: var(--muted); }
+.back { display: inline-block; margin-bottom: 28px; font-size: 14px; }
+.banner { background: #fff6e5; color: #6b4e00; border: 1px solid #f0dca8;
+  padding: 8px 12px; border-radius: 6px; font-size: 13px; margin-bottom: 28px; }
+@media (prefers-color-scheme: dark) { .banner { background: #2a2410; color: #e8d8a0; border-color: #4a3f18; } }
+footer.site { border-top: 1px solid var(--line); margin-top: 60px; padding-top: 16px;
+  color: var(--muted); font-size: 13px; }
