@@ -30,6 +30,7 @@ export async function POST(req) {
     canonical_url: body.canonical_url || null,
     published_at: body.published_at || now,
     updated_at: now,
+    target_keyword: body.target_keyword || null,
   };
 
   let supa;
